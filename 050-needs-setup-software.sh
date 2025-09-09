@@ -154,12 +154,14 @@ sudo systemctl enable cups
 echo "################################################################"
 echo "####             WHAT TO DO NOW?                             ###"
 echo "################################################################"
-echo "Arch Linux Tweaktool:"
-echo "   - SAMBA installeren"
-echo "Maybe..."
-echo "   - opennic-up dns updater/extra nameservers for security (aur)"
-echo "   - shortwave"
-echo "   - megasync (aur)"
+echo "Setup os-prober"
 echo "Have a look at..."
 echo "   - AppArmor"
 echo "################################################################"
+
+# sudo pacman -S os-prober
+#    81  grub-mkconfig -o /boot/grub/grub.cfg
+#    82  sudo grub-mkconfig -o /boot/grub/grub.cfg
+# sudo btrfs subvolume snapshot / /.snapshots/root_snapshot_$(date +%Y%m%d_%H%M%S)
+# sudo btrfs subvolume snapshot /home /.snapshots/home_snapshot_$(date +%Y%m%d_%H%M%S)
+# sudo grub-mkconfig -o /boot/grub/grub.cfg

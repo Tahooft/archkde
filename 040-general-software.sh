@@ -42,7 +42,12 @@ audex
 krename
 kid3
 plasma-camera
-# powerdevil 	# Manages the power consumption settings of a Plasma Shell
+
+# Connect to iPad 
+gvfs
+ifuse
+libimobiledevice
+
 
 adapta-gtk-theme
 adobe-source-sans-fonts
@@ -130,6 +135,7 @@ ttf-ubuntu-font-family
 usb_modeswitch
 usbutils
 vlc
+vlc-plugins-all
 volumeicon
 wikiman
 yt-dlp
