@@ -1,0 +1,220 @@
+﻿# Flatpak
+Steam
+Video Trimmer
+qBittorrent
+
+
+
+
+echo "################################################################"
+echo "####             WHAT TO DO NOW?                             ###"
+echo "################################################################"
+echo "Setup os-prober"
+echo "Have a look at..."
+echo "   - AppArmor"
+echo "################################################################"
+
+# sudo pacman -S os-prober
+#    81  grub-mkconfig -o /boot/grub/grub.cfg
+#    82  sudo grub-mkconfig -o /boot/grub/grub.cfg
+# sudo btrfs subvolume snapshot / /.snapshots/root_snapshot_$(date +%Y%m%d_%H%M%S)
+# sudo btrfs subvolume snapshot /home /.snapshots/home_snapshot_$(date +%Y%m%d_%H%M%S)
+# sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+
+https://wiki.archlinux.org/title/USBGuard
+
+edit kernel-parameters for optimalisation like: mitigations=off
+run  hblock  regularly
+
+    Enable paccache.timer to clear the package cache weekly
+    if using an SSD, enable fstrim.timer to discard unused blocks periodically
+    Install and configure reflector to frequently update the mirrorlist automatically
+    For laptops, setup CPU frequency scaling and optimise battery life with tlp, autocpu-freq, powertop or power-profiles-daemon etc
+    Install a backup kernel like LTS or Zen kernel
+
+  3  pacman -Ss samba`
+  404  pacman -Ss smb
+  405  pacman -Ss avahi
+  406  systemctl status avahi
+  407  systemctl status avahi-daemon
+  408  systemctl start avahi-daemon
+  409  systemctl start smb
+  410  systemctl start nmb
+  411  systemctl status smb
+  412  systemctl status nmb
+  413  ls /etc | grep smb
+  414  ls /etc 
+  415  ls /etc | grep samba
+  416  ls /etc/samba | grep smb
+  417  ls
+  418  sudo cp smb.conf.txt /etc/samba/smb.conf
+
+
+    pacman -Ss ffmpegthumbnailer 
+  375  pacman -S ffmpegthumbnailer 
+
+lynis   # audit system
+rkhunter
+logwatch 
+
+USBGuard # on laptop
+
+
+Arch Linux Tweaktool:
+   - SAMBA installeren
+Maybe...
+   - opennic-up dns updater/extra nameservers for security (aur)
+   - shortwave
+   - megasync (aur)
+Have a look at...
+   - AppArmor
+
+
+   ### Enable smartctl
+#sudo smartctl -s on /dev/sdx
+# Enable weekly trim of ssd
+#systemctl enable fstrim.timer
+
+
+###########################################################################
+#                                SYSTEEM VEILIGHEID
+###########################################################################
+
+#arch-audit > arch-audit     # Audit van de geinstalleerde pakketten
+#sudo lshw > lshw.txt        # Overzicht van het systeem
+#grep -r . /sys/devices/system/cpu/vulnerabilities/
+#
+##  Add the following line to /etc/pam.d/system-login to add a delay of at least 4 seconds between failed login attempts:
+#auth optional pam_faildelay.so delay=4000000
+#
+#Lees: https://wiki.archlinux.org/title/GNOME/Keyring
+#
+## When using console-based login, edit /etc/pam.d/login:
+#- Add: auth optional pam_gnome_keyring.so    at the end of the auth section 
+#- and: session optional pam_gnome_keyring.so auto_start   at the end of the session section. 
+
+
+###########################################################################
+#                                OVERWEGEN
+###########################################################################
+#i3keys
+#glances (Conky alternative)
+#lynis - security audit (sudo lynis audit system)
+#rkhunter (rootkit hunter)
+#opennic-up	add nameservers (lynis audit advices more then one nameserver...)
+#goverlay - framerate van games 
+#obsidian - notes / brain / 
+#ncdu - tui voor overzicht diskruimte
+#linphone - voip on pc and mobile
+#wireshark	monitor netwerk
+#kismet - Ontdekt alle wifi's  
+#darkstat - Network statistics gatherer (packet sniffer)
+#gnome-boxes
+#phoronix-test-suite (voor https://openbenchmarking.org/s)
+#video-trimmer (Flatpak)
+
+#https://www.youtube.com/watch?v=s0SyDa70l6w --- 10 best
+
+
+###########################################################################
+#                                LAPTOP SPECIFIC
+###########################################################################
+
+#https://wiki.archlinux.org/title/Laptop
+#    https://wiki.archlinux.org/title/Backlight
+#    https://wiki.archlinux.org/title/Fingerprint_GUI
+#
+#
+#
+#laptop-mode-tools - AUR - If nothing happens on launch (and you're expecting a GUI), install python-pyqt5
+#thermald - Linux daemon used to prevent the overheating of Intel CPUs.
+#    thermald.service enable 
+#
+#
+#fingerprint-gui - fingerprint reader voor laptop – nog niet werkend te krijgen...
+#cbatticon - battery icon - https://github.com/valr/cbatticon
+
+###########################################################################
+#                                VSCode extensions
+###########################################################################
+#mermaid
+#docker
+#github pull requests and issues
+#gitlent
+#.run - coderunner (overwegen)
+
+
+
+
+
+
+pacman -S intel-ucode
+
+pacman -S Qjournalctl (systemctl enable tlp.service)
+
+## Enforce a delay after a failed login attempt
+Add the following line to /etc/pam.d/system-login to add a delay of at least 4 seconds between failed login attempts: 
+
+# enable a simple firewall
+pacman -s gufw
+sudo ufw enable
+(firewalld   firewall - nu op thold)
+
+# Kan eruit?
+(file roller) archive manager
+kvantum manager
+
+# failed login → 4seconds waiting
+/etc/pam.d/system-login
+auth optional pam_faildelay.so delay=4000000
+
+# SSH can be configured to deny remote logins with the root user by editing the "Authentication" section in the daemon configuration file. Simply set PermitRootLogin to no: 
+/etc/ssh/sshd_config
+PermitRootLogin no
+
+# Bekijken
+grep -r . /sys/devices/system/cpu/vulnerabilities/
+
+# Battery savings
+# Nu op laptop de ltp.service enabled en xfce-powermanager for settings (Conflict?)
+
+## Lees: https://wiki.archlinux.org/title/Laptop
+
+# Filesystem monitor plugin for the Xfce4 panel
+xfce4-fsguard-plugin
+
+# fingerprint reader voor laptop – nog niet werkend te krijgen...
+fingerprint-gui
+
+https://www.youtube.com/watch?v=s0SyDa70l6w --- 10 best
+
+https://github.com/CyberShadow/aconfmgr      slaat alle Arch configs op
+
+wireshark	monitor netwerk
+kismet https://www.kismetwireless.net/docs/readme/intro/	Ontdekt alle wifi's  
+https://unix4lyfe.org/darkstat/		monitor report all eth0 traffic
+
+firewalld   firewall - nu op thold
+
+lynis - security audit (sudo lynis audit system)
+arch-audit
+rkhunter (rootkit hunter)
+
+
+opennic-up	add nameservers (lynis audit advices more then one nameserver...)
+
+goverlay - framerate van games 
+
+obsidian - notes / brain / 
+
+linphone - voip on pc and mobile
+
+
+https://www.gfinityesports.com/war-thunder/review-is-it-good-worth-playing/
+War Thunder on Steam
+
+
+ncdu - tui voor overzicht diskruimte
+
+ 

@@ -35,7 +35,7 @@ brave-bin
 btrfs-assistant
 btrfs-desktop-notification
 clamav-unofficial-sigs
-ddev-bin
+# ddev-bin
 # dropbox
 #nomacs #  	A Qt image viewer
 # phoronix-test-suite

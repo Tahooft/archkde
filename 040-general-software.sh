@@ -41,7 +41,7 @@ kalm
 audex
 krename
 kid3
-plasma-camera
+# plasma-camera
 
 # Connect to iPad 
 gvfs
@@ -51,28 +51,33 @@ libimobiledevice
 
 adapta-gtk-theme
 adobe-source-sans-fonts
-arandr
-arc-gtk-theme
+# arandr
+# arc-gtk-theme
+adwaita
 arch-audit
 audacity
-autorandr
+# autorandr
 awesome-terminal-fonts
 baobab # Disk Usage Analyzer
 bash-completion
 bash-language-server
 bat
+breeze5
+btrfs-progs
+btrfs-assistant
 catfish
 chromium
 clamav
-# cpupower 	# (Flagget out of date)  Linux kernel tool to examine and tune power saving related features of your processor
-cronie
+cpupower 	# Linux kernel tool to examine and tune power saving related features of your processor
+# cronie
 flatpak
 firefox
 firefox-adblock-plus
+fwupd
 gimp
 gimp-plugin-gmic
 git
-gnome-boxes
+# gnome-boxes
 gnome-disk-utility
 gnome-mahjongg
 gparted
@@ -85,7 +90,7 @@ hdparm
 hwinfo
 # hplip
 imagemagick
-i7z 	# A better i7 (and now i3, i5) reporting tool for Linux
+# i7z 	# A better i7 (and now i3, i5) reporting tool for Linux
 intel-ucode	# Microcode update files for Intel CPUs
 inxi
 jellyfin-ffmpeg
@@ -98,14 +103,11 @@ man-pages
 # meld
 most
 mpv
-neofetch
+ncdu
+# neofetch
 neovim
-network-manager-applet
+# network-manager-applet
 noto-fonts
-# nvidia 
-# nvidia-utils 
-# nvidia-settings
-# nvidia-prime
 nvtop	# GPUs process monitoring for AMD, Intel and NVIDIA
 oxygen-icons
 # power-profiles-daemon # Makes power profiles handling available over D-Bus
@@ -116,7 +118,7 @@ seahorse
 # simple-scan
 sysstat	# real time drive usage. example: iostat -xh 1 5 --- toont drives (x=? h=human readble 1=update in seconds 5=how often)
 ttf-nerd-fonts-symbols # Nice for neovim
-telegram-desktop
+# telegram-desktop
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
@@ -137,6 +139,14 @@ usbutils
 vlc
 vlc-plugins-all
 volumeicon
+
+# XFCE4
+# xfce4
+# garcon
+# xfwm4
+# xfdesktop
+# xfce4-session
+
 wikiman
 yt-dlp
 )
