@@ -26,7 +26,14 @@ echo "Installation of the development packages"
 
 list=(
 
-# Plasma+
+## Nvidia
+nvidia-container-toolkit #  allows users to build and run GPU-accelerated containers
+
+### AI setup
+# ollama-cuda
+
+
+### Plasma+
 kdeconnect
 kdenlive
 ksystemlog
@@ -43,26 +50,40 @@ krename
 kid3
 # plasma-camera
 
-# Connect to iPad 
+### Connect to iPad 
 gvfs
 ifuse
+# iw # nl80211 based CLI configuration utility for wireless device
 libimobiledevice
 
-
-adapta-gtk-theme
+### Fonts, Icons & Themes
 adobe-source-sans-fonts
-# arandr
-# arc-gtk-theme
 adwaita
+awesome-terminal-fonts
+noto-fonts
+noto-fonts-emoji
+ttf-nerd-fonts-symbols # Nice for neovim
+ttf-bitstream-vera
+ttf-dejavu
+ttf-droid
+ttf-font-awesome
+ttf-hack
+ttf-inconsolata
+ttf-liberation
+ttf-roboto
+ttf-ubuntu-font-family
+oxygen-icons
+adapta-gtk-theme
+breeze5
+gtk-theme-elementary
+
+### Other software
 arch-audit
 audacity
-# autorandr
-awesome-terminal-fonts
 baobab # Disk Usage Analyzer
 bash-completion
 bash-language-server
 bat
-breeze5
 btrfs-progs
 btrfs-assistant
 catfish
@@ -83,17 +104,16 @@ gnome-mahjongg
 gparted
 grub-btrfs
 gsmartcontrol
-gtk-theme-elementary
 hblock	# adblocker - maybe needs setup
 hddtemp
 hdparm
 hwinfo
 # hplip
-imagemagick
 # i7z 	# A better i7 (and now i3, i5) reporting tool for Linux
 intel-ucode	# Microcode update files for Intel CPUs
 inxi
 jellyfin-ffmpeg
+koko # A simple and fast image viewer for KDE
 libreoffice-fresh
 libusb-compat
 logrotate
@@ -101,44 +121,34 @@ lshw
 man-db
 man-pages
 # meld
+mkvtoolnix-cli # Set of tools to create, edit and inspect Matroska files
+mkvtoolnix-gui
 most
 mpv
 ncdu
 # neofetch
 neovim
-# network-manager-applet
-noto-fonts
 nvtop	# GPUs process monitoring for AMD, Intel and NVIDIA
-oxygen-icons
 # power-profiles-daemon # Makes power profiles handling available over D-Bus
+pacman-contrib # includes oa pactree
 pychess
 rsync
-# samba
 seahorse
-# simple-scan
 sysstat	# real time drive usage. example: iostat -xh 1 5 --- toont drives (x=? h=human readble 1=update in seconds 5=how often)
-ttf-nerd-fonts-symbols # Nice for neovim
-# telegram-desktop
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 tmux
 tree
-ttf-bitstream-vera
-ttf-dejavu
-ttf-droid
-ttf-font-awesome
-ttf-hack
-ttf-inconsolata
-ttf-liberation
-ttf-roboto
-ttf-ubuntu-font-family
 usb_modeswitch
 usbutils
 vlc
 vlc-plugins-all
 volumeicon
+wikiman
+wl-clipboard
+yt-dlp
 
 # XFCE4
 # xfce4
@@ -146,9 +156,10 @@ volumeicon
 # xfwm4
 # xfdesktop
 # xfce4-session
+# arandr
+# autorandr
+# arc-gtk-theme
 
-wikiman
-yt-dlp
 )
 
 count=0

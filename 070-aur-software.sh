@@ -39,9 +39,7 @@ clamav-unofficial-sigs
 # dropbox
 #nomacs #  	A Qt image viewer
 # phoronix-test-suite
-sublime-text-4
 # subtitleedit
-tamsyn-font
 # tealdeer   # concise man pages 
 visual-studio-code-bin
 youtube-dl
