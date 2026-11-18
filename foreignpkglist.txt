@@ -1,0 +1,11 @@
+brave-bin
+btrfs-desktop-notification
+clamav-unofficial-sigs
+ddev-bin
+dupeguru
+sublime-text-4
+tamsyn-font
+visual-studio-code-bin
+yay
+yay-debug
+youtube-dl
